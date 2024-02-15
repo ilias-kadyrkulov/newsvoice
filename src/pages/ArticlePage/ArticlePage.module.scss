@@ -5,7 +5,6 @@
 
 .postHero {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 
@@ -20,6 +19,7 @@
 
 .postHeroTitle {
   color: var(--color-text_primary);
+  font-family: 'Bitter', sans-serif;
 
   margin: 1rem 0;
 }
@@ -44,12 +44,16 @@
 
 .postBodyLead {
   color: var(--color-text_primary);
+  font-family: 'Bitter', sans-serif;
+  line-height: 1.6rem;
 
   margin-bottom: 2rem;
 }
 
 .postBodyParagraph {
   color: var(--color-text_secondary);
+  font-family: 'Bitter', sans-serif;
+  line-height: 1.6rem;
 
   margin-bottom: 2rem;
 }
@@ -62,5 +66,11 @@
   .postBody {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .postHeroTitle {
+   font-size: 1.5rem;
   }
 }

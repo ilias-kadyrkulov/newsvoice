@@ -34,7 +34,7 @@
 
   h2 {
     line-height: 0.9rem;
-    
+
     margin: 0.7rem 0;
   }
 
@@ -57,9 +57,55 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
+  .postFeed {
+    article {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
   .postFeed {
     grid-template-columns: 1fr 1fr 1fr;
+
+    article {
+      img {
+        height: 240px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .postFeed {
+    article {
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .postFeed {
+    article {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 867px) {
+  .postFeed {
+    article {
+      img {
+        height: 160px;
+      }
+    }
   }
 }
 
@@ -69,15 +115,74 @@
 
     article {
       img {
-        width: 100%;
         height: 220px;
       }
     }
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
+  .postFeed {
+    article {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 592px) {
   .postFeed {
     grid-template-columns: 1fr;
+
+    article {
+      img {
+        height: 320px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 530px) {
+  .postFeed {
+    article {
+      img {
+        height: 280px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 475px) {
+  .postFeed {
+    article {
+      img {
+        height: 260px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 415px) {
+  .postFeed {
+    article {
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .postFeed {
+    article {
+      img {
+        height: 200px;
+      }
+    }
   }
 }
