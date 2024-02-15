@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../../styles/_mixins.scss';
 
 .main {
   padding: 0 20px;
@@ -7,8 +8,8 @@
     color: var(--color-text_secondary);
     font-size: 1.1rem;
     font-weight: 700;
-    /* line-height: 0.5rem; */
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
 
     padding: 0.2rem 0;
     margin-top: 1rem;
@@ -42,7 +43,7 @@
     color: var(--color-text_primary);
     text-decoration: none;
     font-size: 1.1rem;
-    font-family: 'Bitter', sans-serif;
+    @include bitterFontAndLineHeight(1.3);
     font-weight: 700;
 
     &:hover {
@@ -52,7 +53,7 @@
 
   p {
     color: var(--color-text_secondary);
-    font-family: 'Bitter', sans-serif;
+    @include bitterFontAndLineHeight(1.3);
     font-weight: 400;
   }
 }

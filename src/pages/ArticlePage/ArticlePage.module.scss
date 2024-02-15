@@ -1,3 +1,5 @@
+@import '../../styles/_mixins.scss';
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -19,7 +21,7 @@
 
 .postHeroTitle {
   color: var(--color-text_primary);
-  font-family: 'Bitter', sans-serif;
+  @include bitterFontAndLineHeight;
 
   margin: 1rem 0;
 }

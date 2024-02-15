@@ -1,0 +1,4 @@
+@mixin bitterFontAndLineHeight($lh: 1.6) {
+    font-family: 'Bitter', sans-serif;
+    line-height: $lh;
+}
