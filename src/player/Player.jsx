@@ -215,12 +215,12 @@ function Player({ text, speaker_id = 2 }) {
             </div>
           )}
         </div>
-        <button className="infoIcon" aria-label="info button">
+        <button className={isInfoActive ? 'info-icon-active' : 'info-icon'} aria-label="info button">
           <FontAwesomeIcon icon={faCircleInfo} onClick={handleInfoIcon} />
         </button>
       </div>
       {isInfoActive && (
-        <div className={`${isInfoActive && 'info-active'} info`}>
+        <div className={isInfoActive ? 'info-active' : 'info-hidden'}>
           Бул үн жасалма интеллект менен жасалган. API <a href="https://ulut.kg/">"Улут Софт"</a>{' '}
           компанияга таандык, жаңылыктарды үнгө өткөзүү кызматын{' '}
           <a href="https://crm.kg/">CRM Technologies</a> компаниясы жасап чыкты.
