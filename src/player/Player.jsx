@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, FC } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
-import { faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
+import { faVolumeUp, faVolumeMute, faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { TextToSpeech } from '../api'
 import './Player.css'
 
@@ -16,6 +16,8 @@ function Player({ text, speaker_id = 2 }) {
   const [showPlaybackRateMenu, setShowPlaybackRateMenu] = useState(false)
   const [audio, setAudio] = useState('')
   const [showControls, setShowControls] = useState(false)
+
+  const [isInfoActive, setIsInfoActive] = useState(false)
 
   const getAudio = async () => {
     const response = await TextToSpeech.getAudioFile(text, speaker_id)
@@ -119,6 +121,10 @@ function Player({ text, speaker_id = 2 }) {
 
   const playbackRates = [0.5, 1, 1.5, 2]
 
+  const handleInfoIcon = () => {
+    setIsInfoActive(!isInfoActive)
+  }
+
   return (
     <div className="player-wrapper">
       <audio
@@ -209,7 +215,17 @@ function Player({ text, speaker_id = 2 }) {
             </div>
           )}
         </div>
+        <button className="infoIcon" aria-label="info button">
+          <FontAwesomeIcon icon={faCircleInfo} onClick={handleInfoIcon} />
+        </button>
       </div>
+      {isInfoActive && (
+        <div className={`${isInfoActive && 'info-active'} info`}>
+          Бул үн жасалма интеллект менен жасалган. API <a href="https://ulut.kg/">"Улут Софт"</a>{' '}
+          компанияга таандык, жаңылыктарды үнгө өткөзүү кызматын{' '}
+          <a href="https://crm.kg/">CRM Technologies</a> компаниясы жасап чыкты.
+        </div>
+      )}
     </div>
   )
 }

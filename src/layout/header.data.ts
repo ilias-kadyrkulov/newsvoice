@@ -13,21 +13,21 @@ export const navLinks: TNavLink[] = [
   {
     id: 2,
     title: 'ЖАҢЫЛЫКТАР',
-    path: '/zhanylyktar',
+    path: '#',
   },
   {
     id: 3,
     title: 'Экономика',
-    path: '/ekonomika',
+    path: '#',
   },
   {
     id: 4,
     title: 'Бизнес',
-    path: '/biznes',
+    path: '#',
   },
   {
     id: 5,
     title: 'Бийлик',
-    path: '/biilik',
+    path: '#',
   },
 ]

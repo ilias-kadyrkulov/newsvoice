@@ -67,7 +67,7 @@ export const Header = () => {
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <Link to="#">{link.title}</Link>
+              <Link to={link.path}>{link.title}</Link>
             </li>
           ))}
         </ul>

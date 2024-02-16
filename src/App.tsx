@@ -7,7 +7,14 @@ function App() {
     <>
       <Suspense
         fallback={
-          <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              translate: 'transform(-50%;-50%)',
+            }}
+          >
             <RotatingLines
               width="100"
               animationDuration="0.75"
