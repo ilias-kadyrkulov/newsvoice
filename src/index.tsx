@@ -4,12 +4,12 @@ import reportWebVitals from './reportWebVitals'
 import './index.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import axe from 'react-axe'
-import React from 'react'
+// import axe from 'react-axe'
+// import React from 'react'
 
-if (process.env.NODE_ENV !== 'production') {
-  axe(React, ReactDOM, 1000, {})
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   axe(React, ReactDOM, 1000, {})
+// }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(

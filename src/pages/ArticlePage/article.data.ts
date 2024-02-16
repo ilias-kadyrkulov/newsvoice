@@ -1,4 +1,4 @@
-import { TArticleContent } from './types'
+  import { TArticleContent } from './types'
 
 export const data: TArticleContent[] = [
   {

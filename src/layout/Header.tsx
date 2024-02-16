@@ -5,11 +5,20 @@ import { useEffect, useState } from 'react'
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+
+  const scrolled = winScroll / height
+  // console.log(scrolled)
+  // console.log(height)
 
   useEffect(() => {
     let scrollTimeout: any
 
     const handleScroll = () => {
+      // if(window.screenY)
+
       cancelAnimationFrame(scrollTimeout)
 
       scrollTimeout = requestAnimationFrame(() => {
