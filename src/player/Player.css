@@ -17,8 +17,8 @@
   background: var(--color-text_secondary);
   color: white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,8 +128,8 @@ input[type='range']::-webkit-slider-thumb {
   border: none;
   cursor: pointer;
   svg {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     path {
       fill: var(--color-text_secondary);
     }
