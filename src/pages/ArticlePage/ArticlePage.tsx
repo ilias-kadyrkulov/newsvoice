@@ -8,8 +8,9 @@ const ArticlePage = () => {
   const { id } = useParams()
 
   const article = data[Number(id) - 1]
-  const textToSpeech = article.lead.concat(article.body)
-
+  const textToSpeech = article.title.concat(article.lead, article.body)
+  console.log(textToSpeech);
+  
   const renderPostParagraphs = (text: string) => {
     const paragraphs = text.split('\n').map((paragraph, index) => (
       <p key={index} className={styles.postBodyParagraph}>
